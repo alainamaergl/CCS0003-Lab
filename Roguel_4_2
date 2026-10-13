@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    //input
+    string empID,PayrollPeriod,EmpName;
+    double monthlySalary;
+    int minLA;
+    const double PhilHealth = 1000.00;
+    const double pagibig = 800.00;
+    const double sss = 1200.00;
+
+    cout << "Enter Payroll Period: ";
+    getline (cin,PayrollPeriod);
+    cout << "Enter Employee ID: ";
+    getline (cin,empID);
+    cout << "Enter Employee Name: ";
+    getline (cin,EmpName);
+
+    cout << "Enter Monthly Salary: ";
+    cin >> monthlySalary;
+    cout << "Enter Lates and Absences in minutes: ";
+    cin >> minLA;
+
+    //computation
+    double hoursLA = static_cast<double>(minLA) / 60.0;
+    double hrlyRate = monthlySalary /30.0 / 8.0;
+
+    //deductions
+    double LAdeduction = hoursLA * hrlyRate;
+    double tax = monthlySalary * 0.12;
+
+    double totalDeduction = LAdeduction + tax + PhilHealth + pagibig + sss;
+    double netPay = monthlySalary - totalDeduction;
+
+    // reciept
+
+    cout << "\n\t\t\t\t\t FEU Institute of Technology \t\t\t\n";
+
+    cout << "Employee ID: " << empID << "\t\t\t\t"
+        << "Payroll Period: " << PayrollPeriod << endl;
+    cout << "Employee Name: " << EmpName <<endl;
+
+    cout << fixed << setprecision(2);
+    cout << "\nINCOME\t\t\t\t\t\t\t\t DEDUCTIONS\n";
+    cout << "Monthly Salary PHP " << monthlySalary;
+
+    cout << "\t\t\t Lates and Absences  \t(" << LAdeduction << ")" << endl;
+
+    cout << "\t\t\t\t\t\t\t\t\t Philhealth  \t\t\t(" << PhilHealth << ")\n" ;
+    cout << "\t\t\t\t\t\t\t\t\t Pag-ibig  \t\t\t\t(" << pagibig << ")\n" ;
+    cout << "\t\t\t\t\t\t\t\t\t SSS  \t\t\t\t\t(" << sss << ")\n" ;
+    cout << "\t\t\t\t\t\t\t\t\t Withholding Tax  \t\t(" << tax << ")\n" ;
+
+    cout << "Total Earnings: PHP " << monthlySalary;
+    cout << "\nTotal Deductions: PHP " << totalDeduction;
+
+    cout << fixed << setprecision (1);
+    cout << "\nNet Pay: PHP " << netPay;
+
+
+    return 0;
+}
