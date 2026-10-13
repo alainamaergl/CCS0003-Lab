@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double peso;
+
+    cout << "Enter Philippine Peso:  ";
+    cin >> peso;
+
+    double dollar = peso / 43.33089;
+    double euro = dollar * 0.734719;
+    double yuan = dollar * 6.346934;
+    double koruna = dollar * 18.77263;
+    double krone = dollar * 5.449007;
+    double shegel = dollar * 3.726334;
+    double dinar = dollar * 0.274588;
+
+    cout << "Dollar: " << dollar <<" $" << endl;
+    cout << "Euro: " << euro <<" €" << endl;
+    cout << "Yuan: " << yuan <<" ¥" << endl;
+    cout << "Koruna: " << koruna <<" Kč" << endl;
+    cout << "Krone: " << krone <<" kr" << endl;
+    cout << "Shegel: " << shegel <<" ₪" << endl;
+    cout << "Dinar: " << dinar <<" KD" << endl;
+
+
+    return 0;
+}
