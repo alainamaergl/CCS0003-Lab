@@ -1,26 +1,94 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main()
 {
-    cout << "\033[1mDay\t\t\t" << "Time\t\t\t" << "Course code\t\t" << "Section\t\t" << "Room\t\033[0m" << endl;
-    cout << "Monday\t" << "\t\t\t-------------NO CLASSES-------------\n" << endl;
+cout << left;
+    //header
+    cout << setw(15) << "\033[1m Day"
+    << setw(15) << "\033[1m Time"
+    << setw(20) << "\033[1m Course Code"
+    << setw(15) << "\033[1m Section"
+    << "\033[1m Room \033[0m" << endl;
 
-    cout << "Tuesday\t\t" << "7:00-9:40\t\t" << "CCS0001\t\t\t" << "TN02\t\t" << "ONLINE" << endl;
-    cout << "\t\t\t11:00-12:30\t\t" << "GED0011\t\t\t" << "TN02\t\t" << "ONLINE" << endl;
-    cout << "\t\t\t1:00-2:20\t\t" << "GED0006\t\t\t" << "TN02\t\t" << "ONLINE\n" << endl;
+    //tuesday
+    cout << setw(10) << "Tuesday"
+         << setw(15) << "7:00-9:40"
+         << setw(15) << "CCS0001"
+         << setw(10) << "TN02"
+         << "ONLINE" << endl;
 
-    cout << "Wednesday\t" << "7:00-9:50\t\t" << "CCS0001L\t\t" << "TN02\t\t" << "F703" << endl;
-    cout << "\t\t\t11:00-12:50\t\t" << "GED0004\t\t\t" << "TN02\t\t" << "F301" << endl;
-    cout << "\t\t\t1:00-2:50\t\t" << "GED0009\t\t\t" << "TN02\t\t" << "F505\n" << endl;
+     cout << setw(10) << ""
+        << setw(15) << "11:00-12:50"
+         << setw(15) << "GED0011"
+         << setw(10) << "TN02"
+         << "ONLINE" << endl;
 
-    cout << "Thursday\t" << "7:00-9:50\t\t" << "CCS0003L\t\t" << "TN02\t\t" << "F703\n" << endl;
+     cout << setw(10) << ""
+        << setw(15) << "1:00-2:20"
+         << setw(15) << "GED0006"
+         << setw(10) << "TN02"
+         << "ONLINE\n" << endl;
 
-    cout << "Friday\t\t" << "7:00-9:40\t\t" << "CCS0003\t\t\t" << "TN02\t\t" << "ONLINE" << endl;
-    cout << "\t\t\t11:00-12:30\t\t" << "GED0011\t\t\t" << "TN02\t\t" << "ONLINE" << endl;
-    cout << "\t\t\t1:00-2:20\t\t" << "GED0006\t\t\t" << "TN02\t\t" << "ONLINE\n" << endl;
+    //wed
+    cout << setw(10) << "Wednesday"
+         << setw(15) << "7:00-9:50"
+         << setw(15) << "CCS0001L"
+         << setw(10) << "TN02"
+         << "F703" << endl;
 
-    cout << "Saturday\t" << "11:00-12:50\t\t" << "GED0004\t\t\t" << "TN02\t\t" << "F301" << endl;
-    cout << "\t\t\t1:00-2:50\t\t" << "GED0009\t\t\t" << "TN02\t\t" << "F505" << endl;
-   
+    cout << setw(10) << ""
+         << setw(15) << "11:00-12:50"
+         << setw(15) << "GED0004"
+         << setw(10) << "TN02"
+         << "F301" << endl;
+
+     cout << setw(10) << ""
+         << setw(15) << "1:00-2:50"
+         << setw(15) << "GED0009"
+         << setw(10) << "TN02"
+         << "F505\n" << endl;
+
+
+    //thurs
+    cout << setw(10) << "Thursday"
+         << setw(15) << "7:00-9:50"
+         << setw(15) << "CCS0003L"
+         << setw(10) << "TN02"
+         << "F703\n" << endl;
+
+     //fri
+    cout << setw(10) << "Friday"
+         << setw(15) << "7:00-9:40"
+         << setw(15) << "CCS0003"
+         << setw(10) << "TN02"
+         << "ONLINE" << endl;
+
+     cout << setw(10) << ""
+         << setw(15) << "11:00-12:50"
+         << setw(15) << "GED0011"
+         << setw(10) << "TN02"
+         << "ONLINE" << endl;
+
+    cout << setw(10) << ""
+         << setw(15) << "1:00-2:20"
+         << setw(15) << "GED0006"
+         << setw(10) << "TN02"
+         << "ONLINE\n" << endl;
+
+     //sat
+    cout << setw(10) << "Saturday"
+         << setw(15) << "11:00-12:50"
+         << setw(15) << "GED0004"
+         << setw(10) << "TN02"
+         << "F301" << endl;
+
+    cout << setw(10) << ""
+         << setw(15) << "1:00-2:50"
+         << setw(15) << "GED0009"
+         << setw(10) << "TN02"
+         << "F505" << endl;
+
+
     return 0;
 }
