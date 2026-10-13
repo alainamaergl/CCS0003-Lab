@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double sideA,sideB,hyp;
+
+    cout << "Enter side A: ";
+    cin >> sideA;
+    cout << "Enter side B: ";
+    cin >> sideB;
+
+    double squarehyp = pow(sideA,2) + pow(sideB, 2);
+
+    hyp = sqrt(squarehyp);
+
+    cout << "----Result----" << endl;
+    cout << "Hypotenuse is:  " << hyp << endl;
+
+
+    return 0;
+}
