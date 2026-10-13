@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    double sideA, sideB, angleC;
+
+    cout << "Enter side A: ";
+    cin >> sideA;
+    cout << "Enter side B: ";
+    cin >> sideB;
+    cout << "Enter angle C: ";
+    cin >> angleC;
+
+    double angleC_radian = (angleC * 3.14159265) / 180.0;
+    double square_sideC = (pow(sideA,2) + pow(sideB,2)) - ((2 * sideA * sideB) * cos(angleC_radian));
+    double sideC = sqrt(square_sideC);
+
+    cout << "Side C is: " << sideC;
+
+    cout << fixed << setprecision(2);
+    cout << "\nRounded: " << sideC;
+
+    return 0;
+}
